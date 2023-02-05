@@ -1,0 +1,39 @@
+class Person
+{
+    public string FullName { get; set; }
+    public int Age { get; set; }
+
+    public Person(string fullName, int age)
+    {
+        FullName = fullName;
+        Age = age;
+    }
+
+    public Person()
+    {
+        return;
+    }
+
+}
+
+class Program
+{
+    static void Main()
+    {
+        Person person1 = new Person("Korefan Myravev", 26);
+        Person person2 = new Person();
+
+        Talk(person1.FullName);
+        Move(person1.Age);
+    }
+
+    static void Move(int age)
+    {
+        Console.WriteLine("Данному человеку " + age + " лет");
+    }
+
+    static void Talk(string fullName)
+    {
+        Console.WriteLine("Данного человека зовут " + fullName);
+    }
+}
